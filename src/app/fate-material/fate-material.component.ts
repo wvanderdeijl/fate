@@ -51,7 +51,7 @@ export class FateMaterialComponent implements  ControlValueAccessor, OnDestroy, 
   }
   protected _placeholder: string;
 
-  public uiId;
+  public uiId  = 'material-' + (instanceCounter++);;
   @HostBinding()
   id = `${this.uiId}`;
 
@@ -130,7 +130,6 @@ export class FateMaterialComponent implements  ControlValueAccessor, OnDestroy, 
   protected changed = new Array<(value: string) => void>();
 
   constructor(controller: FateControllerService, parser: FateParserService, icon: FateIconService, el: ElementRef, @Optional() @Self() public ngControl: NgControl) {
-    this.uiId = 'material-' + (instanceCounter++);
     // Setting the value accessor directly (instead of using
     // the providers) to avoid running into a circular import.
     if (this.ngControl != null) {
