@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FateInputComponent } from './fate-input.component';
 
@@ -6,7 +6,7 @@ describe('FateEditorComponent', () => {
   let component: FateInputComponent;
   let fixture: ComponentFixture<FateInputComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FateInputComponent ]
     })
