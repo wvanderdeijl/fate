@@ -60,8 +60,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "fate:build",
-            "ssl": true,
-            "baseHref":  "/fate/"
+            "ssl": true
           },
           "configurations": {
             "production": {
@@ -91,16 +90,6 @@
               "src/favicon.ico"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": []
-          }
         }
       }
     },
@@ -114,15 +103,6 @@
           "options": {
             "protractorConfig": "./protractor.conf.js",
             "devServerTarget": "fate:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": []
           }
         }
       }
