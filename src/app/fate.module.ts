@@ -24,6 +24,8 @@ export { FateHtmlParserService } from './fate-html-parser.service';
 export { FateLegacyBrowserService } from './fate-legacy-browser.service';
 export { FateNode } from './fate-node';
 export { FateType } from './fate-type.enum';
+export { FateBootstrapComponent } from './fate-bootstrap/fate-bootstrap.component';
+export { FateMaterialComponent } from './fate-material/fate-material.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FateLinkDropdownComponent } from './fate-link-dropdown.component';
 
@@ -6,7 +6,7 @@ describe('FateLinkDorpdownComponent', () => {
   let component: FateLinkDropdownComponent;
   let fixture: ComponentFixture<FateLinkDropdownComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FateLinkDropdownComponent ]
     })

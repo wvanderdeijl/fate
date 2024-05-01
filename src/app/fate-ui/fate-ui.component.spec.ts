@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FateUiComponent } from './fate-ui.component';
 
@@ -6,7 +6,7 @@ describe('FateEditorUiComponent', () => {
   let component: FateUiComponent;
   let fixture: ComponentFixture<FateUiComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FateUiComponent ]
     })

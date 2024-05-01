@@ -11,7 +11,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,7 +23,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -37,9 +42,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -50,14 +53,15 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "fate:build",
-            "ssl": true,
-            "baseHref":  "/fate/"
+            "servePath": "/fate/",
+            "ssl": true
           },
           "configurations": {
             "production": {
@@ -87,16 +91,6 @@
               "src/favicon.ico"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": []
-          }
         }
       }
     },
@@ -111,20 +105,10 @@
             "protractorConfig": "./protractor.conf.js",
             "devServerTarget": "fate:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": []
-          }
         }
       }
     }
   },
-  "defaultProject": "fate",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
