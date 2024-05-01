@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/onaluf/fate.svg?branch=master)](https://travis-ci.org/onaluf/fate) [![NPM version](https://img.shields.io/npm/v/fate-editor.svg)](https://www.npmjs.com/package/fate-editor) [![NPMS Score](https://badges.npms.io/fate-editor.svg)](https://npms.io/search?q=fate-editor) [![Pacakge Size](https://img.shields.io/bundlephobia/min/fate-editor.svg)](https://www.npmjs.com/package/fate-editor) [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![NPM version](https://img.shields.io/npm/v/@wvanderdeijl/fate-editor.svg)](https://www.npmjs.com/package/@wvanderdeijl/fate-editor) [![Pacakge Size](https://img.shields.io/bundlephobia/min/@wvanderdeijl/fate-editor.svg)](https://www.npmjs.com/package/@wvanderdeijl/fate-editor) [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+# Fork
+
+This is a fork of https://github.com/onaluf/fate with minimal changes to make it work with newer Angular versions. The original repository seems to be abandoned and hasn't upgrade beyond Angular v9
 
 # Flexible Angular Text Editor
 
@@ -10,9 +14,9 @@ For a live demo of the editor you can go to [the project's site](https://onaluf.
 
 # Installation and usage
 
-Use npm to download the module: `npm install --save fate-editor`. Then import the `FateModule` in your app:
+Use npm to download the module: `npm install --save @wvanderdeijl/fate-editor`. Then import the `FateModule` in your app:
 ```typescript
-import { FateModule } from 'fate-editor';
+import { FateModule } from '@wvanderdeijl/fate-editor';
 // ...
 
 @NgModule({
@@ -27,7 +31,7 @@ import { FateModule } from 'fate-editor';
 
 If you want to use the material version of fate **you will now need to add** `FateMaterialModule` to your imports too:
 ```typescript
-import { FateModule, FateMaterialModule } from 'fate-editor';
+import { FateModule, FateMaterialModule } from '@wvanderdeijl/fate-editor';
 // ...
 
 @NgModule({
@@ -112,7 +116,7 @@ Creating a custom set of icons for your app is the simplest form of customizatio
 ```typescript
 import { Injectable } from '@angular/core';
 
-import { FateIconService } from 'fate-editor';
+import { FateIconService } from '@wvanderdeijl/fate-editor';
 
 @Injectable()
 export class MyIconService extends FateIconService {
