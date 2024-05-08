@@ -4,7 +4,7 @@ cache:
     - ~/.npm
 notifications:
   email: false
-node_js: '10'
+node_js: '14'
 
 before_script:
 - npm install -g @angular/cli
